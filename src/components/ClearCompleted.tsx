@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { TodosContext } from "../contexts/TodosContext";
+import clearCompletedTasks from "../functions/clearCompletedTasks";
 
 const Wrapper = styled.button`
   cursor: pointer;
@@ -20,7 +22,12 @@ const Wrapper = styled.button`
 `;
 
 const ClearCompleted = () => {
-  return <Wrapper>Clear Completed</Wrapper>;
+  const { setTodoList, todoList } = useContext(TodosContext);
+  return (
+    <Wrapper onClick={() => clearCompletedTasks({ todoList, setTodoList })}>
+      Clear Completed
+    </Wrapper>
+  );
 };
 
 export default ClearCompleted;
