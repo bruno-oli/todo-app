@@ -8,6 +8,7 @@ interface KeyboardEvent<T = Element> {
 export default function addask(
   e: KeyboardEvent<HTMLInputElement>,
   taskName: string,
+  setTaskname: (newState: string) => void,
   isChecked: boolean,
   state: TodosContextTypes
 ) {
@@ -23,6 +24,7 @@ export default function addask(
     toast.success("Task created successfully!", {
       className: "toast-message",
     });
+    setTaskname("");
   } else if (taskName.length <= 3 && e.which === 13) {
     toast.error("Your task name is too short.", {
       className: "toast-message",

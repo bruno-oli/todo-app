@@ -54,9 +54,9 @@ const InputNewTodo = () => {
     <Wrapper>
       <CheckIcon isChecked={isChecked} setIsChecked={setIsChecked} />
       <input
-        onKeyDown={(e) =>
-          addTask(e, taskName, isChecked, { todoList, setTodoList })
-        }
+        onKeyDown={(e) => {
+          addTask(e, taskName, setTaskName, isChecked, { todoList, setTodoList });
+        }}
         value={taskName}
         onChange={(e) => {
           setTaskName(e.target.value);
