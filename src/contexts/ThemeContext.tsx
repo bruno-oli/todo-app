@@ -18,6 +18,32 @@ export const ThemeContext = createContext<ThemeContextType>(initialValue);
 
 export const ThemeContextProvider = ({ children }: ThemeContextProps) => {
   const [isDarkTheme, setIsDarkTheme] = useState(initialValue.isDarkTheme);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // * Get theme from local storage
+  useEffect(() => {
+    function getTheme() {
+      if (localStorage.getItem("theme")) {
+        setIsDarkTheme(
+          JSON.parse(
+            localStorage.getItem("tasks") || `${initialValue.isDarkTheme}`
+          )
+        );
+      }
+      setIsLoading(false);
+    }
+    getTheme();
+  }, []);
+
+  // * Set theme in local storage
+  useEffect(() => {
+    function setTheme() {
+      if (isLoading === false) {
+        localStorage.setItem("theme", JSON.stringify(isDarkTheme));
+      }
+    }
+    setTheme();
+  }, [isDarkTheme]);
   
   return (
     <ThemeContext.Provider value={{ isDarkTheme, setIsDarkTheme }}>
