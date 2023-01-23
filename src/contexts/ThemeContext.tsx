@@ -26,7 +26,7 @@ export const ThemeContextProvider = ({ children }: ThemeContextProps) => {
       if (localStorage.getItem("theme")) {
         setIsDarkTheme(
           JSON.parse(
-            localStorage.getItem("tasks") || `${initialValue.isDarkTheme}`
+            localStorage.getItem("theme") || `${initialValue.isDarkTheme}`
           )
         );
       }

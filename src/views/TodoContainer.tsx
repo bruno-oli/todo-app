@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
+import DragMessage from "../components/DragMessage";
 import FilterBox from "../components/FilterBox";
 import HeaderTodo from "../components/HeaderTodo";
 import InputNewTodo from "../components/InputNewTodo";
@@ -23,6 +24,7 @@ const TodoContainer = () => {
         <TodoList />
         {todoList.length >= 1 && <FilterBox />}
       </FiltersProvider>
+      {todoList.length >= 1 && <DragMessage />}
     </Wrapper>
   );
 };

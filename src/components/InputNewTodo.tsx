@@ -12,7 +12,6 @@ const Wrapper = styled.div`
   width: 100%;
   height: 64px;
   background: ${(props) => props.theme.colors.bodyBackground};
-  box-shadow: 0px 35px 50px -15px ${(props) => props.theme.colors.boxShadow};
   border-radius: 5px;
 
   display: flex;

@@ -10,7 +10,7 @@ const darkTheme = {
     filterItemsColor: "#5B5E7E",
     filterActiveItemColor: "#3A7CFD",
 
-    boxShadow: "rgba(0, 0, 0, 0.5)",
+    boxShadow: "rgba(0, 0, 0, 0.7)",
 
     checkIconBorderColor: "#393A4B",
   },
