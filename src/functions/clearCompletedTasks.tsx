@@ -11,15 +11,20 @@ export default function clearCompletedTasks({
       totalCompletedTasks += 1;
     }
   });
-  setTodoList(
-    todoList.filter((i) => {
-      return i.completed === false;
-    })
-  );
   if (totalCompletedTasks > 0) {
-    toast.success(`${totalCompletedTasks} completed tasks have been removed!`, {
-      className: "toast-message",
-    });
+    toast.success(
+      `${totalCompletedTasks} completed ${
+        totalCompletedTasks > 1 ? "tasks" : "task"
+      } have been removed!`,
+      {
+        className: "toast-message",
+      }
+    );
+    setTodoList(
+      todoList.filter((i) => {
+        return i.completed === false;
+      })
+    );
   } else {
     toast.error(`There are no completed tasks to be removed.`, {
       className: "toast-message",

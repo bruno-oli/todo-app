@@ -11,9 +11,11 @@ const Wrapper = styled.div`
   border-radius: 5px 5px 0 0;
   margin-top: 24px;
   & > div {
-    :not(:last-child) {
-      border-bottom: solid 1px
-        ${(props) => props.theme.colors.taskCompletedNameColor};
+    & > div {
+      :not(:last-child) {
+        border-bottom: solid 1px
+          ${(props) => props.theme.colors.taskCompletedNameColor};
+      }
     }
   }
 `;

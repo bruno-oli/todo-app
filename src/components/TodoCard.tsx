@@ -6,6 +6,7 @@ import iconCheck from "../assets/iconCheck.svg";
 import iconCross from "../assets/iconCross.svg";
 import { ITodo, TodosContext } from "../contexts/TodosContext";
 import removeTask from "../functions/removeTask";
+import setTaskStatus from "../functions/setTaskStatus";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -31,11 +32,14 @@ const Wrapper = styled.div`
     width: 24px;
     height: 24px;
     border-radius: 100%;
-    border: 1px solid #e3e4f1;
+    border: 1px solid ${(props) => props.theme.colors.checkIconBorderColor};
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    &:hover {
+      border-color: ${(props) => props.theme.colors.taskNameColor};
+    }
   }
   span {
     color: ${(props) => props.theme.colors.taskNameColor};
@@ -71,11 +75,13 @@ const TodoCard = ({
 }: {
   data: { name: string; completed: boolean; id: string };
 }) => {
-  function setTaskStatus() {}
   const { setTodoList, todoList } = useContext(TodosContext);
   return (
     <Wrapper className={`${data.completed ? "completed" : ""}`}>
-      <div className="status__toggle" onClick={setTaskStatus}>
+      <div
+        className="status__toggle"
+        onClick={() => setTaskStatus(data, { todoList, setTodoList })}
+      >
         {data.completed && <img src={iconCheck} alt="" />}
       </div>
       <span>{data.name}</span>
