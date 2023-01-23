@@ -25,7 +25,13 @@ const TodosProvider = ({ children }: { children: React.ReactNode }) => {
   // * Get tasks from local storage
   useEffect(() => {
     function getTodoList() {
-      setTodoList(JSON.parse(localStorage.getItem("tasks") || "[]"));
+      if (localStorage.getItem("tasks")) {
+        setTodoList(
+          JSON.parse(
+            localStorage.getItem("tasks") || `${INITIAL_VALUE.todoList}`
+          )
+        );
+      }
       setIsLoading(false);
     }
     getTodoList();
