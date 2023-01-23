@@ -37,15 +37,16 @@ const Filters = () => {
     setFilterAll,
     setFilterCompleted,
   } = useContext(FiltersContext);
-  const { colors } = useContext(ThemeContext);
   return (
     <Wrapper>
       <button
         className={`${filterAll ? "active" : ""}`}
         onClick={() => {
-          setFilterAll(!filterAll);
-          setFilterActive(false);
-          setFilterCompleted(false);
+          if (filterAll === false) {
+            setFilterAll(!filterAll);
+            setFilterActive(false);
+            setFilterCompleted(false);
+          }
         }}
       >
         All
@@ -53,9 +54,11 @@ const Filters = () => {
       <button
         className={`${filterActive ? "active" : ""}`}
         onClick={() => {
-          setFilterActive(!filterActive);
-          setFilterAll(false);
-          setFilterCompleted(false);
+          if (filterActive === false) {
+            setFilterActive(!filterActive);
+            setFilterAll(false);
+            setFilterCompleted(false);
+          }
         }}
       >
         Active
@@ -63,9 +66,11 @@ const Filters = () => {
       <button
         className={`${filterCompleted ? "active" : ""}`}
         onClick={() => {
-          setFilterCompleted(!filterCompleted);
-          setFilterAll(false);
-          setFilterActive(false);
+          if (filterCompleted === false) {
+            setFilterCompleted(!filterCompleted);
+            setFilterAll(false);
+            setFilterActive(false);
+          }
         }}
       >
         Completed
