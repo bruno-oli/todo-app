@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { FiltersContext } from "../contexts/FiltersContext";
-import { ITodo, TodosContext } from "../contexts/TodosContext";
+import { TodosContext } from "../contexts/TodosContext";
 import TodoCard from "./TodoCard";
 
 const Wrapper = styled.div`

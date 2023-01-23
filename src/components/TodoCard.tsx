@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
-import { toast, ToastContainer } from "react-toastify";
+import React, { useContext, useRef } from "react";
 import styled from "styled-components";
 
 import iconCheck from "../assets/iconCheck.svg";
 import iconCross from "../assets/iconCross.svg";
-import { ITodo, TodosContext } from "../contexts/TodosContext";
+import { TodosContext } from "../contexts/TodosContext";
 import removeTask from "../functions/removeTask";
 import setTaskStatus from "../functions/setTaskStatus";
 
@@ -16,6 +15,17 @@ const Wrapper = styled.div`
   height: 63px;
   padding: 0 24px;
   position: relative;
+  @keyframes animeOnEnter {
+    from {
+      transform: translateX(-300px);
+      opacity: 0;
+    }
+    to {
+      transform: initial;
+      opacity: 1;
+    }
+  }
+  animation: animeOnEnter 0.5s ease-out forwards;
   &.completed {
     div {
       background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);

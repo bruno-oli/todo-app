@@ -12,6 +12,7 @@ const Wrapper = styled.main`
   width: 541px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 `;
 
 const TodoContainer = () => {
