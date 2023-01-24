@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { FiltersContext } from "../contexts/FiltersContext";
 import { TodosContext } from "../contexts/TodosContext";
 import TodoCard from "./TodoCard";
-import { DragDropContext } from "react-beautiful-dnd";
 
 const Wrapper = styled.div`
   width: 100%;
