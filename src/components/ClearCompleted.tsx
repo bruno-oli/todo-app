@@ -3,7 +3,9 @@ import styled from "styled-components";
 import { TodosContext } from "../contexts/TodosContext";
 import clearCompletedTasks from "../functions/clearCompletedTasks";
 
-const Wrapper = styled.button`
+const Wrapper = styled.button.attrs({
+  className: "clear__completed",
+})`
   cursor: pointer;
   background: none;
   border: none;

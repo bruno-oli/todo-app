@@ -23,6 +23,13 @@ const Wrapper = styled.div`
     letter-spacing: -0.194444px;
     color: ${(props) => props.theme.colors.filterItemsColor};
   }
+  @media only screen and (max-width: 480px) {
+    justify-content: center;
+    .items__left,
+    .clear__completed {
+      display: none;
+    }
+  }
 `;
 
 const FilterBox = () => {

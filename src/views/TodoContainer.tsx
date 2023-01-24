@@ -13,6 +13,9 @@ const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  @media only screen and (max-width:480px) {
+    width: 324px;
+  }
 `;
 
 const TodoContainer = () => {

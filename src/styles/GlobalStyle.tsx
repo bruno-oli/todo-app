@@ -15,6 +15,9 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     padding-top: 70px;
     overflow-x: hidden;
+    @media only screen and (max-width:480px) {
+      padding-top: 40px;
+    }
   }
 `
 
