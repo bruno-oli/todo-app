@@ -24,7 +24,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 - [x] Salvar as tarefas localmente usando o local storage.
 - [x] Salvar o tema ativo localmente usando o local storage.
-- [ ] Deixar o projeto responsivo para dispositivos mobile.
+- [x] Deixar o projeto responsivo para dispositivos mobile.
 - [ ] Criar funcionalidade de "Drag and Drop"
 
 ## 💻 Pré-requisitos
