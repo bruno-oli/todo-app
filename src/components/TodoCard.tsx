@@ -63,6 +63,9 @@ const Wrapper = styled.div`
     text-overflow: ellipsis;
     position: relative;
     max-width: 85%;
+    @media only screen and (max-width: 480px) {
+      max-width: 65%;
+    }
     &::before {
       content: "";
       position: absolute;

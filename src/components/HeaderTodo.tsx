@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   margin-bottom: 40px;
   h1 {
-    color: ${props => props.theme.colors.bodyBackground};
+    color: ${props => props.theme.colors.taskBackground};
     font-style: normal;
     font-weight: 700;
     font-size: 40px;

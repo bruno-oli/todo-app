@@ -11,7 +11,7 @@ import addTask from "../functions/addTask";
 const Wrapper = styled.div`
   width: 100%;
   height: 64px;
-  background: ${(props) => props.theme.colors.bodyBackground};
+  background: ${(props) => props.theme.colors.taskBackground};
   border-radius: 5px;
 
   display: flex;
@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   gap: 24px;
 
   .toast-message {
-    background: ${(props) => props.theme.colors.bodyBackground};
+    background: ${(props) => props.theme.colors.taskBackground};
     color: ${(props) => props.theme.colors.taskNameColor};
   }
 

@@ -7,7 +7,7 @@ import { DragDropContext } from "react-beautiful-dnd";
 
 const Wrapper = styled.div`
   width: 100%;
-  background: ${(props) => props.theme.colors.bodyBackground};
+  background: ${(props) => props.theme.colors.taskBackground};
   box-shadow: 0px 35px 50px -15px ${(props) => props.theme.colors.boxShadow};
   border-radius: 5px 5px 0 0;
   margin-top: 24px;

@@ -7,7 +7,7 @@ import Filters from "./Filters";
 const Wrapper = styled.div`
   width: 100%;
   height: 50px;
-  background-color: ${(props) => props.theme.colors.bodyBackground};
+  background-color: ${(props) => props.theme.colors.taskBackground};
   display: flex;
   align-items: center;
   justify-content: space-between;
